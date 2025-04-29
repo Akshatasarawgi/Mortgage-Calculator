@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+       <section id="calculator">
+        <div class="calculator-heading">
+        <h3>Mortgage Calculator</h3>
+        <a href="#" class="clearForm" onclick="clearAll()">Clear All</a>
+       </div>
+
+        <div class="calculator-form">
+        <form id="form">
+          <div class="amount input-with-symbol">
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <div class="input-wrapper">
+            <span class="symbol left">£</span>
+            <input type="number" step="any" class="no-arrows success input-box" id="mortgage-amount" pattern="[0-9]*" name="mortgage-amount">
+          </div> 
+          <span class="error-message">This field is required</span>
+        </div>
+        
+        <div class="form-row">
+        <div class="years input-with-symbol">
+          <label for="mortgage-term">Mortgage Term</label>
+          <div class="input-wrapper">
+            <input type="number" step="any" class="no-arrows success input-box" id="mortgage-term" pattern="[0-9]*"  name="mortgage-term">
+            <span class="symbol right ">years</span>
+        </div>
+        <span class="error-message">This field is required</span>
+        </div>
+
+        <div class="interest input-with-symbol">
+          <label for="interest-rate">Interest Rate</label>
+          <div class="input-wrapper">
+            <input type="number" step="any" class="no-arrows success input-box" id="interest-rate" pattern="[0-9]*" name="interest-rate">
+            <span class="symbol right ">%</span>
+          </div>
+          <span class="error-message">This field is required</span>
+        </div>
+        </div>
+
+        <div class="typeOfMortgage">
+          <label for="mortgage-type">Mortgage-Type</label>
+          <div class="radio-type">
+            <div class="radio-input">  
+            <label>
+            <input type="radio" id="mortgage-type" class="input-box success" name="mortgage-type" value="repayment">
+            Repayment
+            </label>
+          </div>
+          <div class="radio-input">
+            <label>
+            <input type="radio" id="mortgage-type" class="input-box success" name="mortgage-type" value="interest-only">
+            Interest Only
+          </label>
+          </div>
+        </div>
+        <span class="error-message">This field is required</span>
+        </div>
+
+        <div class="calculator-button">
+          <button class="calculateBtn" type="submit">
+            <img src="./assets/images/icon-calculator.svg" alt="image of calculator">
+            Calculate Repayments</button>
+        </div>
+
+        </form>
+      </div>
+    </section>
+
+    <section id="results">
+     
+      <div class="result-success">
+      <div class="result-heading">
+        <h1>Your results</h1>
+        <h4>Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</h4>
+      </div>
+        <div class="result-details">
+          <h4>Your monthly repayments</h4>
+          <h1 class="monthly-repay"></h1>
+          <h4>Total you'll repay over the term</h4>
+          <h2 class="total-repay"></h2>
+        </div>
+      </div>
+
+        <div class="result-fail">
+          <img src="./assets/images/illustration-empty.svg" alt="empty result">
+          <h1>Results shown here</h1>
+          <h4>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</h4>
+        </div>
+     
+    </section>
+  </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Akshata Sarawgi</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
