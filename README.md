@@ -6,8 +6,6 @@ This calculator takes in total mortgage amount in Euros, along with the term, in
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built With](#built-with)
-- [What I Learned](#what-i-learned)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 Users should be able to:
